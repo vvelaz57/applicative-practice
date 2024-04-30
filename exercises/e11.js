@@ -7,7 +7,7 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
-  let planetsWithFewMoons = data.planets
+  return data.planets
     .filter((planet) => {
       if (!planet.moons) {
         return planet;
@@ -15,11 +15,7 @@ export function lowMoonsPlanets(data) {
         return planet.moons.length < 10;
       }
     })
-    .map((value) => {
-      return value.name;
-    });
-
-  return planetsWithFewMoons;
+    .map((value) => value.name);
 }
 
 // === TEST YOURSELF ===
